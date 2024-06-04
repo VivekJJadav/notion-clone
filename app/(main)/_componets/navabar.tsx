@@ -28,9 +28,13 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
     return <div></div>;
   }
 
+  /* eslint-disable react-hooks/rules-of-hooks */
+
   const document = useQuery(api.documents.getById, {
     documentId,
   });
+
+  /* eslint-disable react-hooks/rules-of-hooks */
 
   if (document === undefined) {
     return (

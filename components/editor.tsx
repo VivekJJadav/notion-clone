@@ -5,7 +5,7 @@ import { BlockNoteView } from "@blocknote/mantine";
 import { useTheme } from "next-themes";
 import "@blocknote/core/fonts/inter.css";
 import "@blocknote/mantine/style.css";
-import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
+import { PartialBlock } from "@blocknote/core";
 import { useEdgeStore } from "@/lib/edgestore";
 import { useCallback } from "react";
 

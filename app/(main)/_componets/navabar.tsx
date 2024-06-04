@@ -23,15 +23,15 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
 
   const documentId = params.documentId as Id<"document">;
 
-  const document = useQuery(api.documents.getById, {
-    documentId,
-  });
-
   // Handling the case when documentId is missing
   if (!documentId) {
     console.error("Document ID is missing");
     return <div></div>;
   }
+
+  const document = useQuery(api.documents.getById, {
+    documentId,
+  });
 
   if (document === undefined) {
     return (

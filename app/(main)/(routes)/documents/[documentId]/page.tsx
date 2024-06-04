@@ -1,7 +1,6 @@
 "use client";
 
 import { Cover } from "@/components/cover";
-import { Editor } from "@/components/editor";
 import { Toolbar } from "@/components/toolbar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";

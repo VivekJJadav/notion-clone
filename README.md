@@ -1,6 +1,6 @@
 ## Website is live on
 
-[Take-Notes-App](https://take-notes-app-tau.vercel.app)
+[Notes-Taking-App](https://take-notes-app-tau.vercel.app)
 
 ## Getting Started
 

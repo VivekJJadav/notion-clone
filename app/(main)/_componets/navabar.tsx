@@ -1,4 +1,3 @@
-
 "use client";
 
 import { api } from "@/convex/_generated/api";
@@ -21,10 +20,10 @@ interface NavbarProps {
 export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
   const params = useParams();
 
-  const documentId = params.documentId as Id<"document">;
+  const documentId = params.documentId as Id<"document"> | undefined
 
   // Handling the case when documentId is missing
-  if (!documentId) {
+  if (documentId === undefined) {
     console.error("Document ID is missing");
     return <div></div>;
   }
@@ -70,3 +69,5 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
     </>
   );
 };
+
+

@@ -186,7 +186,7 @@ export const Navigation = () => {
             isMobile && "left-0 w-full"
           )}
         >
-          {!params.DocumentId ? (
+          {!!params.DocumentId ? (
             <Navbar isCollapsed={isCollapsed} onResetWidth={resetWidth} />
           ) : (
             // <p></p>

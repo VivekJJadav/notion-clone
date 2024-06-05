@@ -130,6 +130,7 @@ export const Navigation = () => {
       error: "Failed to create a new note",
     });
   };
+  console.log(params.documentId);
 
   return (
     <>
@@ -189,15 +190,18 @@ export const Navigation = () => {
         {!params.DocumentId && (
           <Navbar isCollapsed={isCollapsed} onResetWidth={resetWidth} />
         )}
-        <nav className="bg-transparent px-3 py-2 w-full relative">
-          {isCollapsed && (
-            <MenuIcon
-              onClick={resetWidth}
-              role="button"
-              className="h-6 w-6 text-muted-foreground absolute left-2 top-2"
-            />
-          )}
-        </nav>
+
+        {!params.documentId && (
+          <nav className="bg-transparent px-3 py-2 w-full relative">
+            {isCollapsed && (
+              <MenuIcon
+                onClick={resetWidth}
+                role="button"
+                className="h-6 w-6 text-muted-foreground absolute left-2 top-2"
+              />
+            )}
+          </nav>
+        )}
       </div>
     </>
   );
